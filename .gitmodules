@@ -1,0 +1,3 @@
+[submodule "lua52-sys/lua"]
+	path = lua52-sys/lua
+	url = https://github.com/Rseding91/Factorio-Lua
