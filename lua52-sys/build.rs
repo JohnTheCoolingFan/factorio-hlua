@@ -51,6 +51,7 @@ fn main() {
         .file("lua/src/loadlib.c")
         .file("lua/src/linit.c")
         .define("LUA_COMPAT_ALL", None)
+        .define("USE_LUA_PACKAGE", None)
         .include("lua/src")
         .compile("liblua.a");
 }
