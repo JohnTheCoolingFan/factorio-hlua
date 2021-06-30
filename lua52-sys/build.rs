@@ -4,10 +4,10 @@ extern crate cc;
 use std::env;
 
 fn main() {
-    match pkg_config::find_library("lua5.2") {
-        Ok(_) => return,
-        Err(..) => {}
-    };
+    //match pkg_config::find_library("lua5.2") {
+        //Ok(_) => return,
+        //Err(..) => {}
+    //};
 
     let mut build = cc::Build::new();
 
@@ -17,6 +17,7 @@ fn main() {
     }
 
     build
+        .cpp(true)
         .file("lua/src/lapi.c")
         .file("lua/src/lcode.c")
         .file("lua/src/lctype.c")
